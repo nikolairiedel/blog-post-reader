@@ -1,0 +1,70 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#postlist{
+    margin: 0;
+    width: 33%;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+.postlistPosts{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 5%;
+    cursor: pointer;
+    border-right: 1px solid black;
+    height: 5%;
+}
+
+.postTitleInner {
+    display: inline-flex;
+    justify-content: end;
+    width: 82%;
+}
+
+.postTitleShrinker {
+    width:80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* #fix: needs further styling */
+.selected {
+    background-color: rgb(202, 202, 212);
+}
+
+.toggle-heart {
+    position: absolute;
+    left: -100vw;
+}
+
+[for='toggle-heart'] {
+    color: #aab8c2;
+    font-size: 2em;
+    cursor: pointer;
+    display: inline-flex;
+    width: 13%;
+    justify-content: flex-end;
+}
+    
+.toggleHeartChecked{
+    color: #e2264d;
+}
+
+#postContent {
+    display: flex;
+    flex-direction: column;
+    width: 57%;
+    padding: 5%;
+}

@@ -1,0 +1,19 @@
+<ul id='postlist'>
+  <li *ngFor='let posts of blogposts' 
+      [class.selected]='posts === selectedBlogpost'
+      class='postlistPosts' 
+      (click)='onSelect(posts)'>
+    <div class='postTitleInner'><div class='postTitleShrinker'>{{ posts.title }}</div></div>
+    
+    <label for="toggle-heart" 
+           [class.toggleHeartChecked]='posts.checked === 1' 
+           (click)='onSelectHeart(posts)'>
+        ❤
+    </label>
+  </li>
+</ul>
+
+<div *ngIf='selectedBlogpost' id='postContent'>
+  <h2>{{ selectedBlogpost.title }}</h2>
+  <p>{{ selectedBlogpost.body }}</p>
+</div>
