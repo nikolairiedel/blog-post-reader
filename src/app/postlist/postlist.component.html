@@ -1,10 +1,14 @@
+<!-- The postlist on the left side of the blog. -->
 <ul id='postlist'>
-  <li *ngFor='let posts of blogposts' 
+  <!-- The *ngFor directive iterates through all the posts in the blogposts object array and creates corresponding list items. -->
+  <li *ngFor='let posts of blogposts'  
       [class.selected]='posts === selectedBlogpost'
       class='postlistPosts' 
       (click)='onSelect(posts)'>
+    <!-- The titles are wrapped to provide better sizing. -->
     <div class='postTitleInner'><div class='postTitleShrinker'>{{ posts.title }}</div></div>
     
+    <!-- Heart label besides the blogpost titles. -->
     <label for="toggle-heart" 
            [class.toggleHeartChecked]='posts.checked === 1' 
            (click)='onSelectHeart(posts)'>
@@ -13,6 +17,7 @@
   </li>
 </ul>
 
+<!-- Adds the blogpost title and body to the postContent text area on the right side. -->
 <div *ngIf='selectedBlogpost' id='postContent'>
   <h2>{{ selectedBlogpost.title }}</h2>
   <p>{{ selectedBlogpost.body }}</p>

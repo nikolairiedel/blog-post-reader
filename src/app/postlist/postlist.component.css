@@ -1,3 +1,4 @@
+/* Styling for the postlist component. */
 :host {
     display: flex;
     flex-direction: row;
@@ -19,9 +20,9 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid black;
     padding: 5%;
     cursor: pointer;
+    border-bottom: 1px solid black;
     border-right: 1px solid black;
     height: 5%;
 }
@@ -39,7 +40,6 @@
     text-overflow: ellipsis;
 }
 
-/* #fix: needs further styling */
 .selected {
     background-color: rgb(202, 202, 212);
 }
