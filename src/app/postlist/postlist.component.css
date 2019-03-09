@@ -29,7 +29,7 @@
 
 .postTitleInner {
     display: inline-flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 82%;
 }
 
@@ -57,7 +57,7 @@
     width: 13%;
     justify-content: flex-end;
 }
-    
+
 .toggleHeartChecked{
     color: #e2264d;
 }
